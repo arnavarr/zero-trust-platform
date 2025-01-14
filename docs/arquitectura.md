@@ -1,4 +1,4 @@
-# Arquitectura Zero Trust Basada en OpenZiti y Open Source
+# Arquitectura Zero Trust Basada en Open Source
 
 ## Justificación
 Se adopta una arquitectura Zero Trust con herramientas open source por su capacidad de integración sin lock-in propietario, su flexibilidad para aplicar políticas complejas (Rego) y su escalabilidad en entornos multinube o híbridos. La inclusión de OpenZiti como capa de overlay habilita la microsegmentación real y elimina la dependencia de configuraciones monolíticas en la aplicación, al abstraer la conectividad segura con su SDK y un IdP centralizado. Además, se aprovecha Kubernetes junto con Kong Gateway como punto de entrada (Ingress) para gestionar el tráfico y reforzar la aplicación de políticas.
