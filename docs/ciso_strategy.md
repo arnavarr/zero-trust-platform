@@ -2,10 +2,15 @@
 
 **Estrategia**: Impulsar un enfoque Zero Trust con herramientas open source, evitando dependencias propietarias y priorizando la granularidad de control, la interoperabilidad con estándares globales y la escalabilidad en entornos dinámicos.
 
-- **Decisión de Políticas (PDP)**: Elegimos Casbin y Warrant por su enfoque abierto y modular. Nos alejamos de soluciones propietarias para asegurar independencia y adaptabilidad.
-- **Administración de Políticas (PA)**: OPA con Rego permite políticas complejas y reutilizables. Optamos por Rego frente a lenguajes menos expresivos, garantizando mayor control y auditoría.
-- **Enforcement (PEP)**: Kong Gateway proporciona un plano de control extensible. Preferimos esto frente a gateways menos flexibles para mantener un enforcement homogéneo.
-- **ICAM**: Gluu brinda soporte a estándares (OAuth2, OIDC, SAML), garantizando integración con múltiples proveedores sin perder soberanía sobre la identidad corporativa.
+- **Decisión de Políticas (PDP) y Administración de Políticas (PA)**:  
+  - **OPA con Rego** se adopta como núcleo tanto para la definición como para la evaluación de políticas, al ofrecer un lenguaje expresivo y reutilizable.  
+  - Este enfoque garantiza independencia frente a soluciones propietarias y proporciona una mayor capacidad de auditoría y adaptación a distintos escenarios.
 
-Estas elecciones reflejan una postura estratégica que evita el lock-in, incrementa la resiliencia y promueve una adopción escalonada del modelo Zero Trust sin debilitar la postura de seguridad. Se prioriza la robustez técnica, la transparencia del código y la adopción de estándares internacionales. No se opta por lo neutral sino por lo sólido, flexible y transparente.
+- **Enforcement (PEP)**:  
+  - **Kong Gateway** se elige como plano de control extensible para unificar políticas y autenticaciones a nivel de API.  
+  - **OpenZiti** ofrece una capa de microsegmentación real, reduciendo la superficie de ataque y garantizando que el enforcement no dependa únicamente de la configuración de cada aplicación.
 
+- **ICAM**:  
+  - **Gluu** brinda soporte para estándares (OAuth2, OIDC, SAML) y garantiza la independencia de proveedores, permitiendo la soberanía sobre la identidad corporativa y facilitando la integración con entornos diversos.
+
+Estas elecciones reflejan una postura estratégica que evita el lock-in, incrementa la resiliencia y promueve una adopción escalonada del modelo Zero Trust sin debilitar la postura de seguridad. Se prioriza la robustez técnica, la transparencia del código y la adopción de estándares internacionales. No se opta por lo “neutral” sino por lo sólido, flexible y transparente.
